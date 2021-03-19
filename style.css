@@ -12,6 +12,7 @@ body{
     font-size: 50;
     text-decoration-style: wavy;
     text-underline-position: below;
+    text-shadow:5px 5px 5px navy;
 }
 b{
     color: rgb(255, 145, 0);
@@ -23,4 +24,5 @@ b{
     border-left-style: dotted;
     font-size: 20;
     border-width: 10;
+    
 }
