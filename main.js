@@ -27,3 +27,17 @@ classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models
 function ModeL(){
     console.log("lc");
 }
+function IdentifyImage(){
+    img = document.getElementById("CapturedI");
+    classifier.classify(img,gr);
+}
+function gr(error,results) {
+    if(error){
+        console.error(error);
+    }else{
+        console.log(results)
+        document.getElementById("Object").innerHTML = results[0].label;
+        confidence = results[0].confidence.toFixed(5)*100 + "%";
+        document.getElementById("Accuracy").innerHTML = confidence;
+    }
+}
